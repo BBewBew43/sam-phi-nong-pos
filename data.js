@@ -130,6 +130,15 @@ const products = [
             { size: "19 นิ้ว", price: 7599 },
         ]
     },
+    {
+        id: 12,
+        name: "เห้งเจีย ไต่เสี่ยฮุกโจว ",
+        category: "งานเรซิ่น",
+        image: "images/resin12.jpg",
+        options: [
+            { size: "12 นิ้ว", price: 1799 },
+        ]
+    },
 
     // ... สินค้าอื่นๆ ของคุณ
 ];
