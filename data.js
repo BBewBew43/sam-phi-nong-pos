@@ -158,15 +158,6 @@ const products = [
         ]
     },
     {
-        id: 16,
-        name: "อั้งไห้ยี่ [紅孩兒] หยินหยีไท้จื้อ [仁兒太子] ",
-        category: "งานเรซิ่น",
-        image: "images/resin13.jpg",
-        options: [
-            { size: "12 นิ้ว", price: 4599 },
-        ]
-    },
-    {
         id: 17,
         name: "อ๋องโบ้เหนียวเหนียว (王母娘娘) ",
         category: "งานเรซิ่น",
