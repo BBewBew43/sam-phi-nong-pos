@@ -1,0 +1,207 @@
+/* sales_report.css */
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+.report-container {
+    background-color: #fff;
+    padding: 30px; /* เพิ่ม padding ให้ดูโปร่งขึ้น */
+    border-radius: 10px; /* เพิ่มความโค้งมน */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* ปรับเงาให้ดูนุ่มนวล */
+    width: 95%;
+    max-width: 1200px; /* กำหนดความกว้างสูงสุด */
+    margin: 20px auto;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px; /* เพิ่ม margin ด้านล่าง */
+}
+
+.report-options > div {
+    margin-bottom: 20px; /* เพิ่ม margin ด้านล่าง */
+    padding: 20px; /* เพิ่ม padding */
+    border: 1px solid #ddd;
+    border-radius: 8px; /* เพิ่มความโค้งมน */
+    background-color: #f9f9f9;
+    display: flex; /* จัดให้อยู่ในแนวนอน */
+    align-items: center; /* จัดให้ label และ input อยู่แนวเดียวกัน */
+}
+
+.report-options label {
+    display: inline-block;
+    width: 120px; /* เพิ่มความกว้าง label */
+    margin-right: 15px;
+    font-weight: bold;
+    color: #555; /* เปลี่ยนสี label */
+}
+
+.report-options select,
+.report-options input[type="date"],
+.report-options input[type="number"],
+.report-options input[type="text"] {
+    padding: 10px; /* เพิ่ม padding */
+    border: 1px solid #ccc;
+    border-radius: 6px; /* เพิ่มความโค้งมน */
+    box-sizing: border-box;
+    width: calc(100% - 140px); /* ปรับความกว้าง */
+    margin-bottom: 0; /* ลบ margin ด้านล่าง */
+    font-size: 1em; /* กำหนดขนาด font */
+}
+
+.report-options button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px; /* เพิ่ม padding */
+    border-radius: 8px; /* เพิ่มความโค้งมน */
+    cursor: pointer;
+    font-size: 1.1em; /* ปรับขนาด font */
+    margin-top: 0; /* จัดให้อยู่ในแนวเดียวกับ input */
+    margin-left: 15px; /* เพิ่ม margin ด้านซ้าย */
+}
+
+.report-options button:hover {
+    background-color: #0056b3;
+}
+
+.report-area {
+    margin-top: 30px; /* เพิ่ม margin ด้านบน */
+    padding: 20px; /* เพิ่ม padding */
+    border: 1px solid #ddd;
+    border-radius: 8px; /* เพิ่มความโค้งมน */
+    background-color: #fff;
+    overflow-x: auto;
+}
+
+.report-area h2 {
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 15px; /* เพิ่ม margin ด้านล่าง */
+    font-size: 1.5em; /* ปรับขนาด font */
+    text-align: center; /* จัดให้อยู่ตรงกลาง */
+}
+
+.report-area table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd; /* เพิ่มเส้นขอบให้กับตาราง */
+}
+
+.report-area th,
+.report-area td {
+    border: 1px solid #ddd;
+    padding: 10px; /* เพิ่ม padding */
+    text-align: left;
+    font-size: 0.9em; /* ปรับขนาด font */
+}
+
+.report-area th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333; /* เปลี่ยนสีตัวอักษรหัวตาราง */
+}
+
+.report-area tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* สลับสีแถว */
+}
+
+.report-area tbody tr:hover {
+    background-color: #e0f7fa; /* เปลี่ยนสีเมื่อ hover */
+}
+
+.report-area p strong {
+    font-size: 1.1em; /* ปรับขนาด font ยอดขายรวม */
+    color: #28a745; /* เปลี่ยนสีตัวอักษรยอดขายรวม */
+}
+
+.print-options {
+    margin-top: 30px; /* เพิ่ม margin ด้านบน */
+    padding: 20px; /* เพิ่ม padding */
+    border: 1px solid #ddd;
+    border-radius: 8px; /* เพิ่มความโค้งมน */
+    background-color: #f9f9f9;
+}
+
+.print-options h3 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 15px; /* เพิ่ม margin ด้านล่าง */
+}
+
+.print-options label {
+    display: inline-block;
+    width: 150px;
+    margin-right: 15px;
+    font-weight: bold;
+    color: #555; /* เปลี่ยนสี label */
+}
+
+.print-options input[type="text"] {
+    padding: 10px; /* เพิ่ม padding */
+    border: 1px solid #ccc;
+    border-radius: 6px; /* เพิ่มความโค้งมน */
+    box-sizing: border-box;
+    width: calc(100% - 170px); /* ปรับความกว้าง */
+    margin-bottom: 15px; /* เพิ่ม margin ด้านล่าง */
+    font-size: 1em; /* กำหนดขนาด font */
+}
+
+.print-options button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 20px; /* เพิ่ม padding */
+    border-radius: 8px; /* เพิ่มความโค้งมน */
+    cursor: pointer;
+    font-size: 1.1em; /* ปรับขนาด font */
+    margin-top: 10px;
+}
+
+.print-options button:hover {
+    background-color: #218838;
+}
+
+.back-button {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 12px 20px; /* เพิ่ม padding */
+    border-radius: 8px; /* เพิ่มความโค้งมน */
+    cursor: pointer;
+    font-size: 1.1em; /* ปรับขนาด font */
+    margin-top: 30px; /* เพิ่ม margin ด้านบน */
+    display: block;
+    width: 160px; /* ปรับขนาดปุ่ม */
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+}
+
+.back-button:hover {
+    background-color: #5a6268;
+}
+
+/* สไตล์เพิ่มเติมสำหรับปุ่มลบและพิมพ์ในตาราง */
+.report-area table button {
+    background-color: #dc3545; /* สีแดงสำหรับลบ */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-right: 5px;
+}
+
+.report-area table button:last-child {
+    background-color: #007bff; /* สีน้ำเงินสำหรับพิมพ์ */
+}
+
+.report-area table button:hover {
+    opacity: 0.8;
+}
