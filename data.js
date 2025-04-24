@@ -57,7 +57,7 @@ const products = [
         id: 6,
         name: "เจ็ดนางฟ้า ชิดแช้เหนียวเหนียว สีแดง",
         category: "งานเรซิ่น",
-        image: "images/resin4.jpg",
+        image: "images/resin5.jpg",
         options: [
             { size: "12 นิ้ว", price: 3999 },
             { size: "16 นิ้ว", price: 4999 },
@@ -68,7 +68,7 @@ const products = [
         id: 7,
         name: "เจ็ดนางฟ้า ชิดแช้เหนียวเหนียว สีส้ม",
         category: "งานเรซิ่น",
-        image: "images/resin4.jpg",
+        image: "images/resin6.jpg",
         options: [
             { size: "12 นิ้ว", price: 3999 },
             { size: "16 นิ้ว", price: 4999 },
@@ -79,7 +79,7 @@ const products = [
         id: 8,
         name: "เจ็ดนางฟ้า ชิดแช้เหนียวเหนียว สีน้ำเงิน",
         category: "งานเรซิ่น",
-        image: "images/resin4.jpg",
+        image: "images/resin7.jpg",
         options: [
             { size: "12 นิ้ว", price: 3999 },
             { size: "16 นิ้ว", price: 4999 },
@@ -90,7 +90,7 @@ const products = [
         id: 9,
         name: "เจ็ดนางฟ้า ชิดแช้เหนียวเหนียว สีฟ้า",
         category: "งานเรซิ่น",
-        image: "images/resin4.jpg",
+        image: "images/resin8.jpg",
         options: [
             { size: "12 นิ้ว", price: 3999 },
             { size: "16 นิ้ว", price: 4999 },
@@ -101,7 +101,7 @@ const products = [
         id: 10,
         name: "เจ็ดนางฟ้า ชิดแช้เหนียวเหนียว สีเขียว",
         category: "งานเรซิ่น",
-        image: "images/resin4.jpg",
+        image: "images/resin9.jpg",
         options: [
             { size: "12 นิ้ว", price: 3999 },
             { size: "16 นิ้ว", price: 4999 },
@@ -112,7 +112,7 @@ const products = [
         id: 11,
         name: "เจ็ดนางฟ้า ชิดแช้เหนียวเหนียว สีเหลือง",
         category: "งานเรซิ่น",
-        image: "images/resin4.jpg",
+        image: "images/resin10.jpg",
         options: [
             { size: "12 นิ้ว", price: 3999 },
             { size: "16 นิ้ว", price: 4999 },
@@ -123,7 +123,7 @@ const products = [
         id: 12,
         name: "เจ็ดนางฟ้า ชิดแช้เหนียวเหนียว สีม่วง",
         category: "งานเรซิ่น",
-        image: "images/resin4.jpg",
+        image: "images/resin11.jpg",
         options: [
             { size: "12 นิ้ว", price: 3999 },
             { size: "16 นิ้ว", price: 4999 },
