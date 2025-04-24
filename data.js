@@ -166,6 +166,42 @@ const products = [
             { size: "12 นิ้ว", price: 1799 },
         ]
     },
+     {
+        id: 18,
+        name: "เจ็ดนางฟ้า ซาเเช้เหนียวเหนียว ",
+        category: "งานเรซิ่น",
+        image: "images/resin18.jpg",
+        options: [
+            { size: "12 นิ้ว", price: 4200 },
+        ]
+    },
+     {
+        id: 19,
+        name: "กิ้วเทียนเอี่ยนลื้อ (九天玄女) ",
+        category: "งานเรซิ่น",
+        image: "images/resin19.jpg",
+        options: [
+            { size: "19 นิ้ว", price: 7500 },
+        ]
+    },
+    {
+        id: 20,
+        name: "เซียนจ๋ายต่งจื้อ (善財童子) ",
+        category: "งานเรซิ่น",
+        image: "images/resin20.jpg",
+        options: [
+            { size: "12 นิ้ว", price: 3500 },
+        ]
+    },
+     {
+        id: 21,
+        name: "หยกลื้อเหนียวเหนียว (玉女娘娘) ",
+        category: "งานเรซิ่น",
+        image: "images/resin21.jpg",
+        options: [
+            { size: "12 นิ้ว", price: 3500 },
+        ]
+    },
 
     // ... สินค้าอื่นๆ ของคุณ
 ];
