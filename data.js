@@ -157,8 +157,8 @@ const products = [
             { size: "12 นิ้ว", price: 3599 },
         ]
     },
-    {
-        id: 17,
+     {
+        id: 1,
         name: "อ๋องโบ้เหนียวเหนียว (王母娘娘) ",
         category: "งานเรซิ่น",
         image: "images/resin17.jpg",
