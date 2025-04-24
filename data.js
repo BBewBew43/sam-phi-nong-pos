@@ -42,6 +42,17 @@ const products = [
             { size: "12 นิ้ว", price: 2000 },
         ]
     },
+    {
+        id: 5,
+        name: " กิ้วเทียนเอี่ยนลื้อ (九天玄女)",
+        category: "งานเรซิ่น",
+        image: "images/resin4.jpg",
+        options: [
+            { size: "12 นิ้ว", price: 2999 },
+            { size: "16 นิ้ว", price: 3999 },
+            { size: "19 นิ้ว", price: 4999 },
+        ]
+    },
 
 
     // ... สินค้าอื่นๆ ของคุณ
