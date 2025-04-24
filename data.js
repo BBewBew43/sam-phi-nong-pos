@@ -131,12 +131,40 @@ const products = [
         ]
     },
     {
-        id: 12,
+        id: 13,
         name: "เห้งเจีย ไต่เสี่ยฮุกโจว ",
         category: "งานเรซิ่น",
         image: "images/resin12.jpg",
         options: [
             { size: "12 นิ้ว", price: 1799 },
+        ]
+    },
+    {
+        id: 14,
+        name: "อังไห้หยี้ ",
+        category: "งานเรซิ่น",
+        image: "images/resin13.jpg",
+        options: [
+            { size: "12 นิ้ว", price: 4599 },
+            { size: "ทวน+พัดเเดง", price: 700 },
+        ]
+    },
+    {
+        id: 15,
+        name: "หยกลื้อเหนียวเหนียว (玉女娘娘) ",
+        category: "งานเรซิ่น",
+        image: "images/resin14.jpg",
+        options: [
+            { size: "12 นิ้ว", price: 3599 },
+        ]
+    },
+    {
+        id: 16,
+        name: "เซียนจ๋ายต่งจื้อ (善財童子) ",
+        category: "งานเรซิ่น",
+        image: "images/resin15.jpg",
+        options: [
+            { size: "12 นิ้ว", price: 3599 },
         ]
     },
 
