@@ -6,10 +6,18 @@ const monthlyMonthSelect = document.getElementById('monthlyMonth');
 const monthlyYearInput = document.getElementById('monthlyYear');
 const reportAreaDiv = document.getElementById('reportArea');
 
+const clickSound = new Audio('sounds/click.wav');
+
 let salesHistory = localStorage.getItem('salesHistory') ? JSON.parse(localStorage.getItem('salesHistory')) : [];
+
+function playClickSound() {
+    clickSound.currentTime = 0;
+    clickSound.play();
+}
 
 // แสดง/ซ่อน ตัวเลือกตามประเภทรายงาน
 reportTypeSelect.addEventListener('change', function() {
+    playClickSound();
     if (this.value === 'daily') {
         dailyOptionsDiv.style.display = 'block';
         monthlyOptionsDiv.style.display = 'none';
@@ -20,6 +28,7 @@ reportTypeSelect.addEventListener('change', function() {
 });
 
 function generateDailyReport() {
+    playClickSound();
     const selectedDate = dailyDateInput.value;
     if (!selectedDate) {
         alert('กรุณาเลือกวันที่');
@@ -32,6 +41,7 @@ function generateDailyReport() {
 }
 
 function generateMonthlyReport() {
+    playClickSound();
     const selectedMonth = monthlyMonthSelect.value;
     const selectedYear = monthlyYearInput.value;
 
@@ -71,9 +81,21 @@ function displayReport(salesData, reportTitle) {
     }
 
     reportAreaDiv.innerHTML = reportHTML;
+
+    // เพิ่ม Event Listener ให้กับปุ่มลบและพิมพ์ที่เพิ่งสร้าง
+    const deleteButtons = reportAreaDiv.querySelectorAll('button[onclick^="deleteSale"]');
+    deleteButtons.forEach(button => {
+        button.addEventListener('click', playClickSound);
+    });
+
+    const printButtons = reportAreaDiv.querySelectorAll('button[onclick^="printReceipt"]');
+    printButtons.forEach(button => {
+        button.addEventListener('click', playClickSound);
+    });
 }
 
 function deleteSale(saleIdToDelete) {
+    playClickSound();
     if (confirm(`คุณแน่ใจหรือไม่ว่าต้องการลบรายการขาย ID: ${saleIdToDelete}?`)) {
         salesHistory = salesHistory.filter(sale => sale.id !== saleIdToDelete);
         localStorage.setItem('salesHistory', JSON.stringify(salesHistory));
@@ -89,6 +111,7 @@ function deleteSale(saleIdToDelete) {
 }
 
 function printReceipt(saleData) {
+    playClickSound();
     const printWindow = window.open('', '_blank');
     let receiptHTML = `
         <html>
@@ -168,4 +191,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const today = new Date().toISOString().split('T')[0];
     document.getElementById('dailyDate').value = today;
     generateDailyReport(); // แสดงรายงานรายวันเริ่มต้น
+
+    // เพิ่ม Event Listener ให้กับ Dropdown เลือกประเภทรายงาน
+    reportTypeSelect.addEventListener('click', playClickSound);
+
+    // เพิ่ม Event Listener ให้กับ Input เลือกวันที่
+    dailyDateInput.addEventListener('click', playClickSound);
+
+    // เพิ่ม Event Listener ให้กับ Select เลือกเดือน
+    monthlyMonthSelect.addEventListener('click', playClickSound);
+
+    // เพิ่ม Event Listener ให้กับ Input เลือกปี
+    monthlyYearInput.addEventListener('click', playClickSound);
+
+    // เพิ่ม Event Listener ให้กับปุ่ม Generate Report ทั้งสองแบบ
+    const generateDailyButton = document.getElementById('generateDaily');
+    if (generateDailyButton) {
+        generateDailyButton.addEventListener('click', generateDailyReport);
+        generateDailyButton.addEventListener('click', playClickSound);
+    }
+
+    const generateMonthlyButton = document.getElementById('generateMonthly');
+    if (generateMonthlyButton) {
+        generateMonthlyButton.addEventListener('click', generateMonthlyReport);
+        generateMonthlyButton.addEventListener('click', playClickSound);
+    }
 });
