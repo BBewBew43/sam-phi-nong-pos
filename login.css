@@ -1,0 +1,59 @@
+body {
+    font-family: sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #b2ebf2); /* ไล่เฉดสีฟ้าอ่อน */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 40px; /* เพิ่ม Padding เล็กน้อย */
+    border-radius: 12px; /* เพิ่มความโค้งมน */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* เพิ่มเงาที่ดูดีขึ้น */
+    width: 320px; /* ปรับขนาดเล็กน้อย */
+    text-align: center;
+}
+
+.login-container h2 {
+    color: #26a69a; /* สีเขียวอมฟ้าที่ดูสดใสและเป็นมืออาชีพ */
+    margin-bottom: 25px;
+    font-size: 2em; /* ปรับขนาดตัวอักษร */
+    font-weight: 500; /* ปรับความหนาตัวอักษร */
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: calc(100% - 22px); /* ปรับเพื่อให้มีพื้นที่ขอบเล็กน้อย */
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #80cbc4; /* สีเขียวอมฟ้าที่อ่อนลง */
+    border-radius: 6px; /* เพิ่มความโค้งมน */
+    box-sizing: border-box;
+    font-size: 1.1em; /* ปรับขนาดตัวอักษร */
+}
+
+.login-container input:focus {
+    outline: none;
+    border-color: #009688; /* สีเขียวอมฟ้าที่เข้มขึ้นเมื่อ Focus */
+    box-shadow: 0 0 8px rgba(0, 150, 136, 0.3); /* เพิ่มเงาเมื่อ Focus */
+}
+
+.login-container button {
+    background-color: #009688; /* สีเขียวอมฟ้าที่เข้ม */
+    color: white;
+    border: none;
+    border-radius: 6px; /* เพิ่มความโค้งมน */
+    padding: 14px 22px; /* เพิ่ม Padding */
+    cursor: pointer;
+    font-size: 1.1em;
+    width: 100%;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* เพิ่ม Transition สำหรับเงา */
+}
+
+.login-container button:hover {
+    background-color: #00796b; /* สีเขียวอมฟ้าที่เข้มขึ้นเมื่อ Hover */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* เพิ่มเงาเมื่อ Hover */
+}

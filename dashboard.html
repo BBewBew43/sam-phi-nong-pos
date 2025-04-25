@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-grid">
+        <div class="category-sidebar">
+            <h3>เมนู</h3>
+            <select id="categoryFilter">
+                <option value="ทั้งหมด">ทั้งหมด</option>
+            </select>
+            <button class="report-button" onclick="window.location.href='sales_report.html'">รายงานการขาย</button>
+            <button class="report-button customer-button" onclick="window.location.href='customers.html'">ข้อมูลลูกค้า</button>
+        </div>
+
+        <div class="product-listing">
+            <h2>รายการสินค้า</h2>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="ค้นหาสินค้า...">
+            </div>
+            <div class="product-list" id="productList"></div>
+        </div>
+
+        <div class="cart-payment-area">
+            <div class="cart-area">
+                <h3>ตะกร้าสินค้า</h3>
+                <ul id="cartItems"></ul>
+                <p>รวม: <span id="total">0</span> บาท</p>
+            </div>
+            <div class="payment-options">
+                <h3>วิธีชำระเงิน</h3>
+                <div class="customer-info">
+                    <label for="customerName">ชื่อลูกค้า:</label>
+                    <input type="text" id="customerName" placeholder="ใส่ชื่อลูกค้า (ไม่บังคับ)">
+                </div>
+                <button onclick="showPaymentModal()">เลือกวิธีชำระเงิน</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="productDetailModal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeProductDetailModal()">ยกเลิก</button>
+            <h3 id="productDetailName"></h3>
+            <img id="productDetailImage" src="" alt="" style="max-width: 100%; height: auto; margin-bottom: 10px;">
+            <p id="productDetailDescription"></p>
+            <p id="productDetailPrice"></p>
+            <div id="productDetailOptions"></div>
+            <div class="modal-actions">
+                <button onclick="addToCartFromDetail()">เพิ่มลงตะกร้า</button>
+                <button onclick="closeProductDetailModal()">ยกเลิก</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="paymentModal">
+        <div class="modal-content">
+            <h3>เลือกวิธีชำระเงิน</h3>
+            <button onclick="checkout('cash')">เงินสด</button>
+            <button onclick="checkout('transfer')">โอนเงิน</button>
+            <button class="payment-cancel-btn" onclick="closePaymentModal()">ยกเลิก</button>
+        </div>
+    </div>
+    <div class="modal" id="cashModal">
+        <div class="modal-content">
+            <h3>รับเงินจากลูกค้า</h3>
+            <input type="number" id="cashInput" placeholder="จำนวนเงินที่ลูกค้าจ่าย" />
+            <p id="changeText"></p>
+            <button onclick="confirmPayment(document.getElementById('cashInput').value)">ยืนยัน</button>
+            <button class="close-btn" onclick="closeCashModal()">ยกเลิก</button>
+        </div>
+    </div>
+    <div class="modal" id="transferModal">
+        <div class="modal-content">
+            <h3>ชำระเงินโดยการโอน</h3>
+            <div style="text-align:center; margin-top: 10px;">
+                <img src="images/QR.jpg" alt="QR Code" style="width: 150px;">
+                <p>หรือสแกน QR Code</p>
+            </div>
+            <button onclick="confirmPayment()">ยืนยันการโอน</button>
+            <button class="close-btn" onclick="closeTransferModal()">ยกเลิก</button>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

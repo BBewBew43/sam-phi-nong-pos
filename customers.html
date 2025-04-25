@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อมูลลูกค้า</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="customers.css">
+</head>
+<body>
+    <div class="dashboard-grid">
+        <div class="category-sidebar">
+            <h3>เมนู</h3>
+            <button class="dashboard-button" onclick="window.location.href='dashboard.html'">หน้าหลัก</button>
+            <button class="report-button" onclick="window.location.href='sales_report.html'">รายงานการขาย</button>
+            <button class="customer-button active" onclick="window.location.href='customers.html'">ข้อมูลลูกค้า</button>
+        </div>
+
+        <div class="customer-management-area">
+            <h2>ข้อมูลลูกค้า</h2>
+
+            <div class="add-customer-form">
+                <h3>เพิ่ม/แก้ไข ลูกค้า</h3>
+                <form id="addCustomerForm">
+                    <div class="form-group">
+                        <label for="customerId">รหัสลูกค้า:</label>
+                        <input type="text" id="customerId" name="customerId" required>
+                        <small class="error-message" id="customerIdError"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerName">ชื่อ-นามสกุล:</label>
+                        <input type="text" id="customerName" name="customerName" required>
+                        <small class="error-message" id="customerNameError"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerPhone">เบอร์โทร:</label>
+                        <input type="tel" id="customerPhone" name="customerPhone">
+                        <small class="error-message" id="customerPhoneError"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="customerAddress">ที่อยู่:</label>
+                        <textarea id="customerAddress" name="customerAddress"></textarea>
+                        <small class="error-message" id="customerAddressError"></small>
+                    </div>
+
+                    <button type="submit">บันทึก</button>
+                    <button type="button" id="cancelEdit" style="display:none;">ยกเลิกแก้ไข</button>
+                    <div id="formFeedback" class="feedback-message" style="display:none;"></div>
+                </form>
+            </div>
+
+            <div class="search-customer-area">
+                <h3>ค้นหาลูกค้า</h3>
+                <input type="text" id="customerSearch" placeholder="ค้นหารหัส, ชื่อ, เบอร์โทร, ที่อยู่">
+            </div>
+
+            <div class="customer-list-area">
+                <h3>รายชื่อลูกค้า</h3>
+                <table id="customerTable">
+                    <thead>
+                        <tr>
+                            <th>รหัสลูกค้า</th>
+                            <th>ชื่อ-นามสกุล</th>
+                            <th>เบอร์โทร</th>
+                            <th>ที่อยู่</th>
+                            <th>การจัดการ</th>
+                        </tr>
+                    </thead>
+                    <tbody id="customerList">
+                        </tbody>
+                </table>
+                <div id="emptyCustomerList" style="display:none;">ไม่มีลูกค้าในระบบ</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="customers.js"></script>
+</body>
+</html>
