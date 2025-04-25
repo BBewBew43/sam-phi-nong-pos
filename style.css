@@ -35,23 +35,34 @@ body {
     box-sizing: border-box;
 }
 
-.category-sidebar .report-button {
+.category-sidebar .report-button,
+.category-sidebar .customer-button,
+.category-sidebar .installment-button {
     display: block;
     width: 100%;
     padding: 10px;
-    background-color: #5cb85c;
-    color: white;
+    background-color: #5cb85c; /* เปลี่ยนเป็นสีเขียว */
+    color: white; /* เปลี่ยนสีตัวอักษรเป็นสีขาวเพื่อให้เข้ากับพื้นหลังสีเขียว */
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    text-align: center;
+    text-align: left;
     text-decoration: none;
     box-sizing: border-box;
-    margin-top: 15px;
+    margin-top: 5px;
 }
 
-.category-sidebar .report-button:hover {
-    background-color: #4cae4c;
+.category-sidebar .report-button:hover,
+.category-sidebar .customer-button:hover,
+.category-sidebar .installment-button:hover {
+    background-color: #4cae4c; /* สีเขียวเข้มขึ้นเมื่อ hover */
+}
+
+.category-sidebar .report-button.active,
+.category-sidebar .customer-button.active,
+.category-sidebar .installment-button.active {
+    background-color: #5cb85c; /* คงสีเขียวเดิมไว้เมื่อ active */
+    color: white;
 }
 
 .product-listing {
