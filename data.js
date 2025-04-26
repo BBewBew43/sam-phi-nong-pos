@@ -193,7 +193,7 @@ const products = [
             { size: "12 นิ้ว", price: 3500 },
         ]
     },
-      {
+    {
         id: 21,
         name: "หยกลื้อเหนียวเหนียว (玉女娘娘) ",
         category: "งานเรซิ่น",
@@ -202,6 +202,24 @@ const products = [
             { size: "12 นิ้ว", price: 3500 },
         ]
     },
+    {
+        id: 22,
+        name: "เทพเจ้า 3 ตา (เทพเอ้อหลาง) ",
+        category: "งานเรซิ่น",
+        image: "images/resin22.jpg",
+        options: [
+            { size: "12 นิ้ว", price: 1799 },
+        ]
+    },
+    {
+        id: 23,
+        name: "นาจาปางสำเร็จ เง็กฮือจิงยิ้ง ",
+        category: "งานเรซิ่น",
+        image: "images/resin23.jpg",
+        options: [
+            { size: "19 นิ้ว", price: 7599 },
+        ]
+    }
 
     // ... สินค้าอื่นๆ ของคุณ
 ];
